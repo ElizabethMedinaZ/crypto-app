@@ -3,6 +3,7 @@ const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd'
 
 import HomePage from "./pages/home"
 import AboutPage from "./pages/about"
+import NotFoundPage from "./pages/not-found"
 import {Routes, Route} from 'react-router'
 
 
@@ -45,12 +46,12 @@ const App = () => {
           error={error}
           />
         }/>
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
       </>
-    )/> 
-    <Route path='/about' element={<AbouPage />} />
-    <Route path='' element={<NotFoundPage />} />
-<>
+    )
+
 
 }
 
